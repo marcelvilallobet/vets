@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+# Create an updated HTML file with "RRHH y Turnos" as a core module
+content = """<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ResTech — Software a medida, sin humo</title>
-  <meta name="description" content="Contabilidad, stock y TPV por 20 €/mes. Y si tienes otro problema, te lo hacemos a medida. Responde al correo y hablamos." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50' x='6' font-size='50'>⚙️</text></svg>">
+  <meta name="description" content="Contabilidad, RRHH, stock y TPV por 20 €/mes. ¿Otro problema? Lo hacemos a medida. Responde al correo y hablamos." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50' x='6' font-size='50'>⚙️</text></svg>'">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -45,7 +46,7 @@
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Software que te resuelve <span class="text-blue-400">hoy</span>.</h1>
-          <p class="mt-4 text-gray-300">Contabilidad, stock y TPV por <strong>20 €/mes</strong>. ¿Otro problema? Lo hacemos a medida.</p>
+          <p class="mt-4 text-gray-300">Contabilidad, <strong>RRHH & Turnos</strong>, stock y TPV por <strong>20 €/mes</strong>. ¿Otro problema? Lo hacemos a medida.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#contacto" class="inline-block bg-blue-500 hover:bg-blue-400 text-white px-5 py-3 rounded-xl font-semibold">Quiero hablar 15′</a>
             <a href="#packs" class="inline-block glass px-5 py-3 rounded-xl font-semibold border border-white border-opacity-10">Ver packs</a>
@@ -55,6 +56,11 @@
         <div class="relative">
           <div class="glass rounded-2xl p-5 md:p-6 border border-white border-opacity-10 shadow-2xl">
             <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="p-4 bg-black bg-opacity-30 rounded-xl border border-white border-opacity-10">
+                <div class="text-2xl">👥</div>
+                <h3 class="mt-2 font-semibold">RRHH & Turnos</h3>
+                <p class="text-gray-400 mt-1">Cuadrantes M/T/N, fichaje, vacaciones.</p>
+              </div>
               <div class="p-4 bg-black bg-opacity-30 rounded-xl border border-white border-opacity-10">
                 <div class="text-2xl">📊</div>
                 <h3 class="mt-2 font-semibold">Contabilidad</h3>
@@ -70,11 +76,6 @@
                 <h3 class="mt-2 font-semibold">TPV / Ventas</h3>
                 <p class="text-gray-400 mt-1">Tickets, devoluciones, simple y rápido.</p>
               </div>
-              <div class="p-4 bg-black bg-opacity-30 rounded-xl border border-white border-opacity-10">
-                <div class="text-2xl">🧩</div>
-                <h3 class="mt-2 font-semibold">A medida</h3>
-                <p class="text-gray-400 mt-1">Si lo necesitas, lo construimos.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -87,7 +88,20 @@
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold">Packs de 20 €/mes</h2>
       <p class="text-gray-300 mt-2">Precio por módulo. Sin permanencias.</p>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="glass rounded-2xl p-6 border border-white border-opacity-10">
+          <div class="text-3xl">👥</div>
+          <h3 class="mt-2 font-semibold text-lg">RRHH & Turnos</h3>
+          <ul class="mt-3 text-sm text-gray-300 space-y-2 list-disc list-inside">
+            <li>Cuadrantes M/T/N</li>
+            <li>Fichaje (web/móvil)</li>
+            <li>Vacaciones y ausencias</li>
+          </ul>
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="text-3xl font-extrabold">20€</span>
+            <span class="text-gray-400">/ mes</span>
+          </div>
+        </div>
         <div class="glass rounded-2xl p-6 border border-white border-opacity-10">
           <div class="text-3xl">📊</div>
           <h3 class="mt-2 font-semibold text-lg">Contabilidad simple</h3>
@@ -157,7 +171,6 @@
   </section>
 
   <!-- Contacto -->
-  <!-- Contacto (simple) -->
   <section id="contacto" class="py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-4">
       <div class="glass rounded-2xl p-6 md:p-8 border border-white border-opacity-10">
@@ -187,3 +200,7 @@
   </script>
 </body>
 </html>
+"""
+with open("/mnt/data/index_rrhh.html", "w", encoding="utf-8") as f:
+    f.write(content)
+"/mnt/data/index_rrhh.html"
