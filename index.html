@@ -189,37 +189,32 @@
     </div>
   </footer>
 
-<script>
-createChat({
-  webhookUrl: '',
-  webhookConfig: {
-    method: 'POST',
-    headers: {}
-  },
-  target: '#n8n-chat',
-  mode: 'window',
-  chatInputKey: 'chatInput',
-  chatSessionKey: 'sessionId',
-  loadPreviousSession: true,
-  metadata: {},
-  showWelcomeScreen: false,
-  defaultLanguage: 'es',
-  initialMessages: [
-    '¡Hola! 👋',
-    'Somos una empresa en Barcelona que diseña, fabrica e instala muebles a medida. ¿En qué podemos ayudarte?'
-  ],
-  i18n: {
-    es: {
-      title: '¡Hola! 👋',
-      subtitle: 'Hablemos sobre tu proyecto de muebles a medida.',
-      footer: '',
-      getStarted: 'Nueva conversación',
-      inputPlaceholder: 'Escribe tu consulta...',
-    },
-  },
-  enableStreaming: false,
-});
-</script>
+  <script>
+    // Mobile nav + year
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    if (btn) { btn.addEventListener('click', () => nav.classList.toggle('hidden')); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Chat n8n -->
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+      webhookUrl: 'https://n8n.srv1012314.hstgr.cloud/webhook/39d1aa67-2c49-4738-8321-f6de1c7af638',
+      initialMessages: ["¡Hola! 👋 ¿En qué te ayudo?"],
+      i18n: {
+        en: {
+          title: "Chat de soporte",
+          inputPlaceholder: "Escribe tu mensaje...",
+          sendButton: "Enviar",
+          restartConversation: "Reiniciar",
+          close: "Cerrar"
+        }
+      }
+    });
+  </script>
+
 
 
 
