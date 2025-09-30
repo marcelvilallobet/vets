@@ -196,21 +196,24 @@
     if(btn){btn.addEventListener('click',()=>nav.classList.toggle('hidden'));}
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-<script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-  createChat({
-    webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL',
-    initialMessages: ["¡Hola! 👋 ¿En qué te ayudo?"],
-    i18n: {
-      en: { // sobreescribe idioma base
-        title: "Chat de soporte",
-        inputPlaceholder: "Escribe tu mensaje...",
-        sendButton: "Enviar",
-        restartConversation: "Reiniciar",
-        close: "Cerrar"
+  <!-- Chat n8n -->
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL',
+      initialMessages: ["¡Hola! 👋 ¿En qué te ayudo?"],
+      i18n: {
+        en: {
+          title: "Chat de soporte",
+          inputPlaceholder: "Escribe tu mensaje...",
+          sendButton: "Enviar",
+          restartConversation: "Reiniciar",
+          close: "Cerrar"
+        }
       }
-    }
-  });
+    });
   </script>
+
 </body>
 </html>
