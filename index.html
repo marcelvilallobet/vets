@@ -193,29 +193,18 @@
     // Mobile nav
     const btn = document.getElementById('menuBtn');
     const nav = document.getElementById('mobileNav');
-    if (btn) { btn.addEventListener('click', () => nav.classList.toggle('hidden')); }
+    if(btn){btn.addEventListener('click',()=>nav.classList.toggle('hidden'));}
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
   <!-- Chat n8n -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
   <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
     createChat({
-      webhookUrl: 'https://n8n.srv1012314.hstgr.cloud/webhook/39d1aa67-2c49-4738-8321-f6de1c7af638/chat', // HTTPS y de producción
-      initialMessages: ["¡Hola! 👋 ¿En qué te ayudo?"],
-      i18n: {
-        en: {
-          title: "Chat de soporte",
-          inputPlaceholder: "Escribe tu mensaje...",
-          sendButton: "Enviar",
-          restartConversation: "Reiniciar",
-          close: "Cerrar"
-        }
-      }
+      webhookUrl: 'https://n8n.srv1012314.hstgr.cloud/webhook/39d1aa67-2c49-4738-8321-f6de1c7af638/chat'
     });
-  </script>
-
-
+</script>
 </body>
 </html>
